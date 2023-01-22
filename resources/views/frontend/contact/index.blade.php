@@ -1,8 +1,18 @@
 @extends('layouts.real')
 @section('content')
+
 <!-- ======= Contact Section ======= -->
 <section id="contact" class="contact">
   <div class="container" data-aos="fade-up">
+
+  @if(session()->has('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <div class="text-center">
+          <strong>{{ session('success') }}</strong>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+  @endif
 
     <div class="section-header">
       <h2>Contact</h2>

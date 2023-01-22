@@ -29,8 +29,10 @@ class ContactController extends Controller
          
         //  return back()->with('success', 'We have received your message and would like to thank you for writing to us.');
         // return redirect()->back()->with('message', 'Your message has been sent. Thank you!');
-        return redirect()->route('home')
-            ->with(['message' => 'Thank you for contact us ', 'alert-type' => 'success']);
+        // return redirect()->route('')
+        //     ->with(['message' => 'Thank you for contact us ', 'alert-type' => 'success']);
+
+        return back()->with('success', 'Your message is send, thank you for contacting us!');
     }
 
     public function store(StoreContactRequest $request)
@@ -41,6 +43,7 @@ class ContactController extends Controller
 
         return redirect()->route('home')
             ->with(['message' => 'Thank you for contact us ', 'alert-type' => 'success']);
+        
     }
 
 

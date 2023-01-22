@@ -168,7 +168,7 @@ return [
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
-        Neonexxa\BillplzWrapperV3\BillplzServiceProvider::class,
+        // Neonexxa\BillplzWrapperV3\BillplzServiceProvider::class,
 
         /*
          * Application Service Providers...
