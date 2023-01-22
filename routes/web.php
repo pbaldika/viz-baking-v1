@@ -12,6 +12,7 @@ use App\Http\Controllers\Frontend\ShopController;
 use App\Http\Controllers\Frontend\ShopTagController;
 use App\Http\Controllers\Frontend\UserController;
 use App\Http\Controllers\Frontend\WishlistController;
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\Backend\PaymentMethodController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -25,6 +26,12 @@ Route::get('/shop/{slug?}', [ShopController::class, 'index'])->name('shop.index'
 Route::get('/shop/tag/{slug}', [ShopTagController::class, 'index'])->name('shop.tag');
 Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
 Route::get('/product/{slug}', [ProductController::class, 'show'])->name('product.show');
+
+//booking
+Route::get('/booking', function(){
+    return view('frontend.booking.index');
+} )-> name ('booking');
+Route::post('booking', [BookingController::class, 'store']);
 
 //about-us
 Route::get('/about-us', function(){

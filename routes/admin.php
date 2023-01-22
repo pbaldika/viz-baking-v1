@@ -55,6 +55,7 @@ Route::group(['middleware' => ['roles']], function () {
     Route::resource('shipping_companies', ShippingCompanyController::class);
     Route::resource('payment_methods', PaymentMethodController::class);
     Route::resource('orders', OrderController::class)->except('create', 'edit');
+    Route::resource('booking', BookingController::class)->except('create', 'edit');
     Route::resource('settings', SettingController::class)->only('index', 'update');
     Route::resource('contacts', ContactController::class)->except('create', 'edit', 'update');
     Route::resource('links', LinkController::class)->except('show');
